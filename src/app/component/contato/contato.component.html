@@ -1,24 +1,30 @@
-<div class="grupoContato">
-    <label for="nome">Nome Completo</label>
-    <input type="text" name="nome" placeholder="José da silva">
- 
-    <label for="email">E-Mail</label>
-    <input type="text" name="email" placeholder="seu_email@exemplo.com">
- 
-    <label for="departamento">Selecione o Departamento</label>
-    <select name="departamento">
-        <option value="adm">Administração</option>
-        <option value="mkt">Marketing</option>
-        <option value="srv">Serviço</option>
-        <option value="limp">Limpeza</option>
-        <option value="ti">Tecnologia da informação</option>
-    </select>
- 
-    <label for="mensagem">Deixe aqui sua mensagem</label>
-    <textarea type="text" name="email" placeholder="ssua mensagem"></textarea>
- 
-    <a href="#" class="btn btn-warning">Limpar</a>
-    <a href="#" class="btn btn-primary">Enviar</a>
-</div>
- 
- 
+<form class="form-contato">
+  <label for="nome">Nome Completo</label>
+  <input type="text" id="nome" name="nome" placeholder="José da Silva" required>
+
+  <label for="email">E-Mail</label>
+  <input type="email" id="email" name="email" placeholder="seu_email@exemplo.com" required>
+
+  <label for="departamento">Selecione o Departamento</label>
+  <select id="departamento" name="departamento">
+    <option value="adm">Administração</option>
+    <option value="mkt">Marketing</option>
+    <option value="srv">Serviço</option>
+    <option value="limp">Limpeza</option>
+    <option value="ti">Tecnologia da informação</option>
+  </select>
+
+  <label for="mensagem">Deixe aqui sua mensagem</label>
+  <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+
+  <div class="botoes">
+    <button type="reset" class="btn btn-warning">Limpar</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+</form>
+<footer>
+  <p>© 2025 | TI-35 Senac Botucatu | Todos os direitos reservados</p>
+  <div class="social-icons">
+    <a href="https://instagram.com" target="_blank">Instagram</a> |
+    <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
+  </div>

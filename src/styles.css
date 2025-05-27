@@ -1,7 +1,16 @@
 body{
-    margin: 0 0;
-    padding: 0 0;
+  margin: 0 0;
+  padding: 0 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  color: #333;
 }
+/* Inicio - Header */
+main {
+  padding: 20px;
+  padding-bottom: 80px; /* para não encobrir o rodapé */
+}
+
  
 /* Inicio - menu */
 menu{
@@ -63,6 +72,18 @@ menu li:hover > span, menu li:hover > a, menu a:hover{
     background-color: #EEEEEE;
  
 }
+
+menu ul {
+  background-color: #222;
+}
+
+menu li:hover > span,
+menu li:hover > a,
+menu a:hover {
+  background-color: #FFD700;
+  color: #000 !important;
+}
+
  
 /* Fim- menu */
  
@@ -76,6 +97,20 @@ footer{
     color: #f3f3f3;
     text-align: center;
 }
+
 /* Fim - Footer */
- 
+
+footer .social-icons {
+  margin-top: 5px;
+}
+
+footer a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
  
