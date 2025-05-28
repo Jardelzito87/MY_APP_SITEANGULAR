@@ -1,5 +1,6 @@
+/* HERO SECTION */
 .hero-home {
-  background-image: url('/assets/images/barbearia.jpg');
+  background-image: linear-gradient(rgba(34,34,34,0.7), rgba(34,34,34,0.5)), url('/assets/images/barbearia.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -7,10 +8,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: #fff;
   position: relative;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 20px;
+  overflow: hidden;
+  animation: heroFadeIn 1.2s ease;
 }
-
 .hero-home::before {
   content: "";
   position: absolute;
@@ -19,12 +23,40 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: scale(1.03);}
+  to { opacity: 1; transform: scale(1);}
+}
 
+/* HERO SECTION (ALTERNATIVE SELECTOR, POSSIBLE ERROR) */
+hero-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #fff;
+  padding: 40px 0;
+}
+
+/* HERO CONTENT */
 .conteudo {
   position: relative;
   z-index: 2;
+  text-align: center;
+}
+.highlight {
+  color: #ffb300;
+  font-weight: bold;
 }
 
+/* BUTTONS */
+.botoes {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
 button {
   margin-top: 20px;
   padding: 12px 24px;
@@ -34,4 +66,89 @@ button {
   border-radius: 5px;
   cursor: pointer;
   color: #333;
+}
+.btn-whatsapp, .btn-visitar {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  color: #fff;
+}
+.btn-whatsapp {
+  background: #25d366;
+}
+.btn-whatsapp:hover {
+  background: #1ebe57;
+}
+.btn-visitar {
+  background: #ffb300;
+  color: #232526;
+}
+.btn-visitar:hover {
+  background: #ffa000;
+}
+
+/* WHATSAPP FLOATING BUTTON */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.whatsapp-float:hover {
+  background: #1ebe57;
+}
+.whatsapp-float i {
+  font-size: 2em;
+}
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  gap: 8px; /* Espaço entre ícone e texto */
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+.btn-whatsapp i {
+  font-size: 1.2em;
+}
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .hero-home {
+    height: 80vh;
+    padding: 20px;
+  }
+  .conteudo h1 {
+    font-size: 2em;
+  }
+  .conteudo p {
+    font-size: 1.2em;
+  }
+  .botoes {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
