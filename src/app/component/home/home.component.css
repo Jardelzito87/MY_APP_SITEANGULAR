@@ -320,3 +320,40 @@ button {
   }
 }
 /* Fim Galeria de Fotos */
+
+/* Redes Sociais */
+.redes-sociais {
+  background: rgba(34,34,34,0.85);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(31,38,135,0.10);
+  max-width: 420px;
+  margin: 48px auto 0 auto;
+  padding: 28px 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.redes-titulo {
+  font-size: 1.4em;
+  color: #ffb300;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.redes-icones {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.redes-icones a {
+  color: #fff;
+  font-size: 2.2em;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.redes-icones a:hover {
+  color: #ffb300;
+  transform: scale(1.15);
+}
+/* Fim Redes Sociais */

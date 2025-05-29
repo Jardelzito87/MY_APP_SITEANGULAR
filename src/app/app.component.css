@@ -2,4 +2,22 @@ h1{
     margin:50% 50%;
     text-align: center;
 }
+/* Adicione ao seu CSS global ou no CSS do app.component */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 12px;
+}
 
+.social-icons a {
+  color: #fff;
+  font-size: 2em;
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ffb300;
+  transform: scale(1.15);
+}
