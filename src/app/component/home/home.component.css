@@ -1,6 +1,10 @@
 /* HERO SECTION */
 .hero-home {
-  background-image: linear-gradient(rgba(34,34,34,0.7), rgba(34,34,34,0.5)), url('https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.7),
+      rgba(34, 34, 34, 0.5)
+    ),
+    url("https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -10,7 +14,7 @@
   text-align: center;
   color: #fff;
   position: relative;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 20px 0 rgba(31, 38, 135, 0.37);
   border-radius: 20px;
   overflow: hidden;
   animation: heroFadeIn 1.2s ease;
@@ -20,14 +24,22 @@
 .hero-home::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 @keyframes heroFadeIn {
-  from { opacity: 0; transform: scale(1.03);}
-  to { opacity: 1; transform: scale(1);}
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* HERO SECTION (ALTERNATIVE SELECTOR, POSSIBLE ERROR) */
@@ -69,7 +81,8 @@ button {
   cursor: pointer;
   color: #333;
 }
-.btn-whatsapp, .btn-visitar {
+.btn-whatsapp,
+.btn-visitar {
   padding: 12px 28px;
   border: none;
   border-radius: 25px;
@@ -112,7 +125,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -125,7 +138,7 @@ button {
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
-  background-color: #25D366;
+  background-color: #25d366;
   color: white;
   padding: 12px 20px;
   border-radius: 8px;
@@ -159,7 +172,8 @@ button {
     gap: 10px;
     align-items: center;
   }
-  .btn-whatsapp, .btn-visitar {
+  .btn-whatsapp,
+  .btn-visitar {
     width: 100%;
     max-width: 280px;
   }
@@ -173,15 +187,15 @@ button {
   gap: 10px;
   margin-top: 32px;
   text-decoration: none;
-  background: rgba(34,34,34,0.7);
+  background: rgba(34, 34, 34, 0.7);
   border-radius: 16px;
   padding: 18px 24px;
-  box-shadow: 0 4px 24px rgba(31,38,135,0.15);
+  box-shadow: 0 4px 24px rgba(31, 38, 135, 0.15);
   transition: box-shadow 0.3s, background 0.3s;
 }
 .pexels-link:hover {
-  background: rgba(255,179,0,0.15);
-  box-shadow: 0 8px 32px rgba(31,38,135,0.25);
+  background: rgba(255, 179, 0, 0.15);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
 }
 .pexels-img {
   display: block;
@@ -190,12 +204,12 @@ button {
   height: 210px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
   border: 3px solid #ffb300;
   transition: box-shadow 0.3s;
 }
 .pexels-img:hover {
-  box-shadow: 0 8px 32px rgba(31,38,135,0.25);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
 }
 
 .pexels-link span {
@@ -230,9 +244,9 @@ button {
 }
 
 .section-card {
-  background: rgba(34,34,34,0.85);
+  background: rgba(34, 34, 34, 0.85);
   border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(31,38,135,0.10);
+  box-shadow: 0 4px 24px rgba(31, 38, 135, 0.1);
   padding: 32px 24px;
   color: #fff;
   text-align: center;
@@ -254,23 +268,24 @@ button {
 .servicos-titulo {
   font-size: 2em;
   color: #ffb300;
-  margin-bottom: 24px;
-  letter-spacing: 1px;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
 }
 
 .servicos-lista {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 5;
+  margin: 10;
 }
 
 .servicos-lista li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 1.1em;
+  gap: 30px;
 }
 
 .servicos-lista li:last-child {
@@ -280,17 +295,21 @@ button {
 .servico-nome {
   font-weight: 500;
   letter-spacing: 0.5px;
+  text-align: center;
+  min-width: 150px;
 }
 
 .servico-preco {
   color: #ffb300;
   font-weight: bold;
   font-size: 1.1em;
+  text-align: center;
+  min-width: 800px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 200px) {
   .section-card {
-    padding: 18px 6px;
+    padding: 0px 0px;
   }
   .section-titulo {
     font-size: 1.3em;
@@ -327,7 +346,7 @@ button {
   height: 160px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
   transition: transform 0.3s, box-shadow 0.3s;
   border: 2px solid #ffb300;
   background: #222;
@@ -336,7 +355,7 @@ button {
 
 .galeria-grid img:hover {
   transform: scale(1.04);
-  box-shadow: 0 8px 32px rgba(31,38,135,0.25);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
   border-color: #fff;
 }
 
@@ -402,11 +421,12 @@ button {
 
 .horario-lista li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 1.1em;
+  gap: 30px;
 }
 
 .horario-lista li:last-child {
@@ -416,12 +436,16 @@ button {
 .dia {
   font-weight: 500;
   letter-spacing: 0.5px;
+  text-align: center;
+  min-width: 150px;
 }
 
 .horas {
   color: #ffb300;
   font-weight: bold;
   font-size: 1.1em;
+  text-align: center;
+  min-width: 800px;
 }
 
 @media (max-width: 600px) {
@@ -445,14 +469,14 @@ button {
 
 .parallax-left {
   left: 0;
-  background-image: url('https://images.pexels.com/photos/1319459/pexels-photo-1319459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  box-shadow: inset -10px 0 15px -5px rgba(0,0,0,0.5);
+  background-image: url("https://images.pexels.com/photos/1319459/pexels-photo-1319459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  box-shadow: inset -10px 0 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 .parallax-right {
   right: 0;
-  background-image: url('https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  box-shadow: inset 10px 0 15px -5px rgba(0,0,0,0.5);
+  background-image: url("https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  box-shadow: inset 10px 0 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 /* Efeito parallax ao rolar */
@@ -462,21 +486,29 @@ button {
     transition: transform 0.5s ease-out;
     animation: parallaxScrollLeft 8s infinite alternate ease-in-out;
   }
-  
+
   .parallax-right {
     transform: translateY(0);
     transition: transform 0.5s ease-out;
     animation: parallaxScrollRight 8s infinite alternate ease-in-out;
   }
-  
+
   @keyframes parallaxScrollLeft {
-    from { background-position: center 0%; }
-    to { background-position: center 100%; }
+    from {
+      background-position: center 0%;
+    }
+    to {
+      background-position: center 100%;
+    }
   }
-  
+
   @keyframes parallaxScrollRight {
-    from { background-position: center 100%; }
-    to { background-position: center 0%; }
+    from {
+      background-position: center 100%;
+    }
+    to {
+      background-position: center 0%;
+    }
   }
 }
 
@@ -492,7 +524,7 @@ button {
   .parallax-right {
     width: 80px;
   }
-  
+
   .container {
     padding: 0 90px;
   }
@@ -503,7 +535,7 @@ button {
   .parallax-right {
     width: 40px;
   }
-  
+
   .container {
     padding: 0 50px;
   }
@@ -514,7 +546,7 @@ button {
   .parallax-right {
     display: none;
   }
-  
+
   .container {
     padding: 0 15px;
   }
