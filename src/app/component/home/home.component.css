@@ -1,6 +1,6 @@
 /* HERO SECTION */
 .hero-home {
-  background-image: linear-gradient(rgba(34,34,34,0.7), rgba(34,34,34,0.5)), url('/assets/images/barbearia.jpg');
+  background-image: linear-gradient(rgba(34,34,34,0.7), rgba(34,34,34,0.5)), url('https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -14,6 +14,8 @@
   border-radius: 20px;
   overflow: hidden;
   animation: heroFadeIn 1.2s ease;
+  width: 100%;
+  max-width: 100%;
 }
 .hero-home::before {
   content: "";
@@ -76,6 +78,11 @@ button {
   transition: background 0.2s;
   text-decoration: none;
   color: #fff;
+  min-width: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn-whatsapp {
   background: #25d366;
@@ -150,6 +157,11 @@ button {
   .botoes {
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+  }
+  .btn-whatsapp, .btn-visitar {
+    width: 100%;
+    max-width: 280px;
   }
 }
 
@@ -203,15 +215,40 @@ button {
 /* FIm Estilo para o link da imagem Pexels */
 
 /* Seção de Serviços */
-.servicos {
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 48px auto;
+}
+
+.section-card {
   background: rgba(34,34,34,0.85);
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(31,38,135,0.10);
-  max-width: 420px;
-  margin: 48px auto 0 auto;
   padding: 32px 24px;
   color: #fff;
   text-align: center;
+  width: 100%;
+  scroll-margin-top: 20px; /* Para navegação suave com âncoras */
+}
+
+.section-titulo {
+  font-size: 2em;
+  color: #ffb300;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.servicos {
+  margin: 0;
 }
 
 .servicos-titulo {
@@ -252,11 +289,10 @@ button {
 }
 
 @media (max-width: 600px) {
-  .servicos {
+  .section-card {
     padding: 18px 6px;
-    max-width: 100%;
   }
-  .servicos-titulo {
+  .section-titulo {
     font-size: 1.3em;
   }
   .servicos-lista li {
@@ -267,14 +303,7 @@ button {
 
 /* Galeria de Fotos */
 .galeria {
-  background: rgba(34,34,34,0.85);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(31,38,135,0.10);
-  max-width: 900px;
-  margin: 48px auto 0 auto;
-  padding: 32px 24px;
-  color: #fff;
-  text-align: center;
+  margin: 0;
 }
 
 .galeria-titulo {
@@ -288,6 +317,9 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 18px;
+  justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .galeria-grid img {
@@ -299,6 +331,7 @@ button {
   transition: transform 0.3s, box-shadow 0.3s;
   border: 2px solid #ffb300;
   background: #222;
+  max-width: 200px;
 }
 
 .galeria-grid img:hover {
@@ -308,13 +341,6 @@ button {
 }
 
 @media (max-width: 600px) {
-  .galeria {
-    padding: 18px 6px;
-    max-width: 100%;
-  }
-  .galeria-titulo {
-    font-size: 1.3em;
-  }
   .galeria-grid img {
     height: 100px;
   }
@@ -323,14 +349,7 @@ button {
 
 /* Redes Sociais */
 .redes-sociais {
-  background: rgba(34,34,34,0.85);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(31,38,135,0.10);
-  max-width: 420px;
-  margin: 48px auto 0 auto;
-  padding: 28px 18px;
-  color: #fff;
-  text-align: center;
+  margin: 0;
 }
 
 .redes-titulo {
@@ -350,6 +369,11 @@ button {
   color: #fff;
   font-size: 2.2em;
   transition: color 0.2s, transform 0.2s;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .redes-icones a:hover {
@@ -357,3 +381,141 @@ button {
   transform: scale(1.15);
 }
 /* Fim Redes Sociais */
+
+/* Horário de Funcionamento */
+.horario {
+  margin: 0;
+}
+
+.horario-titulo {
+  font-size: 2em;
+  color: #ffb300;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.horario-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horario-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 1.1em;
+}
+
+.horario-lista li:last-child {
+  border-bottom: none;
+}
+
+.dia {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.horas {
+  color: #ffb300;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+@media (max-width: 600px) {
+  .horario-lista li {
+    font-size: 1em;
+  }
+}
+/* Fim Horário de Funcionamento */
+/* Elementos Parallax nas laterais */
+.parallax-left,
+.parallax-right {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.parallax-left {
+  left: 0;
+  background-image: url('https://images.pexels.com/photos/1319459/pexels-photo-1319459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  box-shadow: inset -10px 0 15px -5px rgba(0,0,0,0.5);
+}
+
+.parallax-right {
+  right: 0;
+  background-image: url('https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  box-shadow: inset 10px 0 15px -5px rgba(0,0,0,0.5);
+}
+
+/* Efeito parallax ao rolar */
+@media (min-width: 1200px) {
+  .parallax-left {
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+    animation: parallaxScrollLeft 8s infinite alternate ease-in-out;
+  }
+  
+  .parallax-right {
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+    animation: parallaxScrollRight 8s infinite alternate ease-in-out;
+  }
+  
+  @keyframes parallaxScrollLeft {
+    from { background-position: center 0%; }
+    to { background-position: center 100%; }
+  }
+  
+  @keyframes parallaxScrollRight {
+    from { background-position: center 100%; }
+    to { background-position: center 0%; }
+  }
+}
+
+/* Ajuste para o container principal com as laterais */
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 0 130px;
+}
+
+@media (max-width: 1200px) {
+  .parallax-left,
+  .parallax-right {
+    width: 80px;
+  }
+  
+  .container {
+    padding: 0 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-left,
+  .parallax-right {
+    width: 40px;
+  }
+  
+  .container {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-left,
+  .parallax-right {
+    display: none;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+}

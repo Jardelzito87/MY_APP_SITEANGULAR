@@ -1,70 +1,116 @@
-<!-- Adicione o link do Font Awesome no seu index.html para os ícones aparecerem -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
-<!-- ...existing code... -->
-<section class="hero-home">
-  <div class="conteudo">
-    <h1>Bem-vindo à <span class="highlight">Barbearia do Alem (ALEMÃO)</span></h1>
-    <p>Estilo e cuidado para homens de atitude.</p>
+<!-- Elementos decorativos parallax -->
+<div class="parallax-left"></div>
+<div class="parallax-right"></div>
 
-    <div class="botoes">
-      <a class="btn-whatsapp" 
-         href="https://wa.me/SEUNUMERO" 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         aria-label="Abrir conversa no WhatsApp com a Barbearia do Alem">
-        <i class="fab fa-whatsapp"></i> Venha nos visitar
-      </a>
+<div class="container">
+  <section class="hero-home">
+    <div class="conteudo">
+      <h1>Bem-vindo à <span class="highlight">Barbearia do Alem</span></h1>
+      <p>Estilo e cuidado para homens de atitude.</p>
+
+      <div class="botoes">
+        <a class="btn-whatsapp" 
+           href="https://wa.me/5511999999999" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           aria-label="Abrir conversa no WhatsApp com a Barbearia do Alem">
+          <i class="fab fa-whatsapp"></i> Agende seu horário
+        </a>
+        <a class="btn-visitar" 
+           href="#servicos" 
+           aria-label="Ver nossos serviços">
+          <i class="fas fa-cut"></i> Nossos serviços
+        </a>
+      </div>
+
+      <!-- Imagem estilosa do Pexels abaixo do botão -->
+      <img src="https://images.pexels.com/photos/12685937/pexels-photo-12685937.jpeg?auto=compress&w=600&h=400&fit=crop" alt="Cadeira Barbearia" class="pexels-img"/>
     </div>
+  </section>
 
-    <!-- Imagem estilosa do Pexels abaixo do botão -->
-    <img src="https://images.pexels.com/photos/12685937/pexels-photo-12685937.jpeg?auto=compress&w=600&h=400&fit=crop" alt="Cadeira Barbearia" class="pexels-img"/>
+  <div class="content-wrapper">
+    <section id="servicos" class="servicos section-card">
+      <h2 class="section-titulo">Nossos Serviços</h2>
+      <ul class="servicos-lista">
+        <li>
+          <span class="servico-nome">Corte Masculino</span>
+          <span class="servico-preco">R$ 35</span>
+        </li>
+        <li>
+          <span class="servico-nome">Barba Completa</span>
+          <span class="servico-preco">R$ 25</span>
+        </li>
+        <li>
+          <span class="servico-nome">Corte + Barba</span>
+          <span class="servico-preco">R$ 55</span>
+        </li>
+        <li>
+          <span class="servico-nome">Sobrancelha</span>
+          <span class="servico-preco">R$ 15</span>
+        </li>
+        <li>
+          <span class="servico-nome">Pigmentação</span>
+          <span class="servico-preco">R$ 40</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Seção de Horário de Funcionamento -->
+    <section class="horario section-card">
+      <h2 class="section-titulo">Horário de Funcionamento</h2>
+      <ul class="horario-lista">
+        <li>
+          <span class="dia">Segunda a Sexta</span>
+          <span class="horas">09:00 - 19:00</span>
+        </li>
+        <li>
+          <span class="dia">Sábado</span>
+          <span class="horas">09:00 - 18:00</span>
+        </li>
+        <li>
+          <span class="dia">Domingo</span>
+          <span class="horas">Fechado</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="galeria section-card">
+      <h2 class="section-titulo">Galeria de Fotos</h2>
+      <div class="galeria-grid">
+        <img src="https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&w=400" alt="Corte degradê" />
+        <img src="https://images.pexels.com/photos/1707828/pexels-photo-1707828.jpeg?auto=compress&w=400" alt="Barba feita" />
+        <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&w=400" alt="Ambiente barbearia" />
+        <img src="https://images.pexels.com/photos/415945/pexels-photo-415945.jpeg?auto=compress&w=400" alt="Corte clássico" />
+        <img src="https://images.pexels.com/photos/250288/pexels-photo-250288.jpeg?auto=compress&w=400" alt="Barbeiro trabalhando" />
+        <img src="https://images.pexels.com/photos/2772083/pexels-photo-2772083.jpeg?auto=compress&w=400" alt="Ambiente moderno" />
+        <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&w=400" alt="Barbearia cadeira" />
+        <img src="https://images.pexels.com/photos/415949/pexels-photo-415949.jpeg?auto=compress&w=400" alt="Detalhe corte" />
+      </div>
+    </section>
+
+    <!-- Seção de Redes Sociais -->
+    <section class="redes-sociais section-card">
+      <h2 class="section-titulo">Siga-nos nas Redes Sociais</h2>
+      <div class="redes-icones">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Barbearia do Alem">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok da Barbearia do Alem">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Barbearia do Alem">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </section>
   </div>
-</section>
-<!-- ...existing code... -->
+</div>
 
- <!-- ...existing code... -->
-<section class="servicos">
-  <h2 class="servicos-titulo">Nossos Serviços</h2>
-  <ul class="servicos-lista">
-    <li>
-      <span class="servico-nome">Corte Masculino</span>
-      <span class="servico-preco">R$ 35</span>
-    </li>
-    <li>
-      <span class="servico-nome">Barba Completa</span>
-      <span class="servico-preco">R$ 25</span>
-    </li>
-    <li>
-      <span class="servico-nome">Corte + Barba</span>
-      <span class="servico-preco">R$ 55</span>
-    </li>
-    <li>
-      <span class="servico-nome">Sobrancelha</span>
-      <span class="servico-preco">R$ 15</span>
-    </li>
-    <li>
-      <span class="servico-nome">Pigmentação</span>
-      <span class="servico-preco">R$ 40</span>
-    </li>
-  </ul>
-</section>
-<!-- ...existing code... -->
-
-<!-- ...existing code... -->
-<section class="galeria">
-  <h2 class="galeria-titulo">Galeria de Fotos</h2>
-  <div class="galeria-grid">
-    <img src="https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&w=400" alt="Corte degradê" />
-    <img src="https://images.pexels.com/photos/1707828/pexels-photo-1707828.jpeg?auto=compress&w=400" alt="Barba feita" />
-    <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&w=400" alt="Ambiente barbearia" />
-    <img src="https://images.pexels.com/photos/415945/pexels-photo-415945.jpeg?auto=compress&w=400" alt="Corte clássico" />
-    <img src="https://images.pexels.com/photos/250288/pexels-photo-250288.jpeg?auto=compress&w=400" alt="Barbeiro trabalhando" />
-    <img src="https://images.pexels.com/photos/2772083/pexels-photo-2772083.jpeg?auto=compress&w=400" alt="Ambiente moderno" />
-    <!-- Novas fotos abaixo -->
-    <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&w=400" alt="Barbearia cadeira" />
-    <img src="https://images.pexels.com/photos/415949/pexels-photo-415949.jpeg?auto=compress&w=400" alt="Detalhe corte" />
-  </div>
-</section>
-<!-- ...existing code... -->
-
- 
+<!-- Botão flutuante de WhatsApp -->
+<a href="https://wa.me/5511999999999" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Contato via WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
