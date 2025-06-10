@@ -198,15 +198,13 @@ button {
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
 }
 .pexels-img {
-  display: block;
-  margin: 32px auto 0 auto; /* Espaço acima e centralização */
-  width: 320px;
-  height: 210px;
+  border-radius: 100%;
+  border: 3px solid #222;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  width: 180px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-  border: 3px solid #ffb300;
-  transition: box-shadow 0.3s;
+  margin-top: 16px;
 }
 .pexels-img:hover {
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
