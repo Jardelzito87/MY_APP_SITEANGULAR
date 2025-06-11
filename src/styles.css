@@ -1,76 +1,84 @@
-body{
+body {
   margin: 0 0;
   padding: 0 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fafafa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://i.postimg.cc/3JY98d1B/barbearia-banner-jpg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #333;
 }
 /* Inicio - Header */
 main {
   padding: 20px;
+  padding-top: 80px; /* ajuste conforme a altura real do seu menu */
   padding-bottom: 80px; /* para não encobrir o rodapé */
 }
 
- 
 /* Inicio - menu */
-menu{
-    margin: 0 0;
-    padding: 0 0;
-    width: auto;
-    display: block;
-    line-height: 1.2;
- 
+menu {
+  margin: 0 0;
+  padding: 0 0;
+  width: auto;
+  display: block;
+  line-height: 1.2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #333333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
- 
-menu ul{
-    width: auto;
-    display: block;
-    font-size: 0;
-    text-align: center;
-    color: #EEEEEE;
-    background-color: #333333;
-    border: transparent;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    z-index: 999999990;
-    border-radius: 3px;
- 
- 
+
+menu ul {
+  width: auto;
+  display: block;
+  font-size: 0;
+  text-align: center;
+  color: #eeeeee;
+  background-color: #333333;
+  border: transparent;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 999999990;
+  border-radius: 3px;
 }
- 
-menu li{
-    display: inline-block;
-    position: relative;
-    font-size: 0;
-    margin: 0;
-    padding: 0;
+
+menu li {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
 }
- 
-menu > ul > li> span, menu > ul> li > a{
-    font-size: 3vh;
-    color: #EEEEEE !important;
-    text-decoration: none;
-    padding: 4vh 2vh;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block;
-    position: relative;
-    transition: all 0.3s;
-   
+
+menu > ul > li > span,
+menu > ul > li > a {
+  font-size: 3vh;
+  color: #eeeeee !important;
+  text-decoration: none;
+  padding: 4vh 2vh;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  position: relative;
+  transition: all 0.3s;
 }
- 
-menu li a{
-    color: #EEEEEE;
-    animation: none;
-    text-decoration: none;    
+
+menu li a {
+  color: #eeeeee;
+  animation: none;
+  text-decoration: none;
 }
- 
-menu li:hover > span, menu li:hover > a, menu a:hover{
-    color: #333333 !important;
-    background-color: #EEEEEE;
- 
+
+menu li:hover > span,
+menu li:hover > a,
+menu a:hover {
+  color: #333333 !important;
+  background-color: #eeeeee;
 }
 
 menu ul {
@@ -80,22 +88,21 @@ menu ul {
 menu li:hover > span,
 menu li:hover > a,
 menu a:hover {
-  background-color: #FFD700;
+  background-color: #ffd700;
   color: #000 !important;
 }
 
- 
 /* Fim- menu */
- 
+
 /* Inicio - Footer */
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333333;
-    color: #f3f3f3;
-    text-align: center;
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333333;
+  color: #f3f3f3;
+  text-align: center;
 }
 
 /* Fim - Footer */
@@ -105,12 +112,10 @@ footer .social-icons {
 }
 
 footer a {
-  color: #FFD700;
+  color: #ffd700;
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
-
- 

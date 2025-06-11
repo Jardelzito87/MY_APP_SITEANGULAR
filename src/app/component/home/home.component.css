@@ -231,7 +231,16 @@ button {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding-left: 120px;
+  padding-right: 120px;
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  box-shadow: 0 4px 24px rgba(31, 38, 135, 0.1);
+  border-radius: 18px;  
 }
 
 .content-wrapper {
@@ -337,6 +346,8 @@ button {
   justify-items: center;
   max-width: 900px;
   margin: 0 auto;
+  background: none !important;
+  background-color: transparent !important;
 }
 
 .galeria-grid img {
@@ -510,21 +521,15 @@ button {
   }
 }
 
-/* Ajuste para o container principal com as laterais */
-.container {
-  position: relative;
-  z-index: 1;
-  padding: 0 130px;
-}
-
+/* Responsivo para telas menores */
 @media (max-width: 1200px) {
   .parallax-left,
   .parallax-right {
     width: 80px;
   }
-
   .container {
-    padding: 0 90px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
@@ -533,9 +538,9 @@ button {
   .parallax-right {
     width: 40px;
   }
-
   .container {
-    padding: 0 50px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -544,8 +549,8 @@ button {
   .parallax-right {
     display: none;
   }
-
   .container {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
