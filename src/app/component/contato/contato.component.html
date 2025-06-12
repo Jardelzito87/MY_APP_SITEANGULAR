@@ -1,30 +1,49 @@
-<form class="form-contato">
-  <label for="nome">Nome Completo</label>
-  <input type="text" id="nome" name="nome" placeholder="José da Silva" required>
+<!-- Cartão de Informações -->
+<aside class="info-card">
+  <!-- Localização -->
+  <section class="info-bloco">
+    <h3>Localização</h3>
+    <p>Rua José Antunes Filho, 381, Jardim Reflorenda, Botucatu - SP, 18605-100</p>
+    <i class="fas fa-location-arrow icone-seta"></i>
+  </section>
 
-  <label for="email">E-Mail</label>
-  <input type="email" id="email" name="email" placeholder="seu_email@exemplo.com" required>
+  <hr />
 
-  <label for="departamento">Selecione o Departamento</label>
-  <select id="departamento" name="departamento">
-    <option value="adm">Administração</option>
-    <option value="mkt">Marketing</option>
-    <option value="srv">Serviço</option>
-    <option value="limp">Limpeza</option>
-    <option value="ti">Tecnologia da informação</option>
-  </select>
+  <!-- Horário -->
+  <section class="info-bloco">
+    <h3>Horário de atendimento</h3>
+    <ul class="horarios">
+      <li>Segunda-Feira <span>09:00 - 18:00</span></li>
+      <li>Terça-Feira <span>09:00 - 18:00</span></li>
+      <li>Quarta-Feira <span>09:00 - 18:00</span></li>
+      <li>Quinta-Feira <span>09:00 - 18:00</span></li>
+      <li>Sexta-Feira <span>09:00 - 18:00</span></li>
+      <li>Sábado <span>09:00 - 14:00</span></li>
+    </ul>
+  </section>
 
-  <label for="mensagem">Deixe aqui sua mensagem</label>
-  <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+  <hr />
 
-  <div class="botoes">
-    <button type="reset" class="btn btn-warning">Limpar</button>
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </div>
-</form>
-<footer>
-  <p>© 2025 | TI-35 Senac Botucatu | Todos os direitos reservados</p>
-  <div class="social-icons">
-    <a href="https://instagram.com" target="_blank">Instagram</a> |
-    <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
+  <!-- Pagamento -->
+  <section class="info-bloco">
+    <h3>Formas de pagamento</h3>
+    <div class="tags">
+      <span>Dinheiro</span>
+      <span>Cartão de Crédito</span>
+      <span>Cartão de Débito</span>
+      <span>PIX</span>
+      <span>CRÉDITO MAQ</span>
+      <span>DÉBITO MAQ</span>
+    </div>
+  </section>
+  <!-- Contato -->
+  <section class="info-bloco">
+    <h3>Contato</h3>
+    <p><i class="fas fa-phone"></i> (14) 99647-2654</p>
+    <p><i class="fas fa-comment-dots"></i> (14) 99647-2654</p>
+  </section>  
+</aside>
+
+<div class="contato-container">
+    <!-- Seu conteúdo aqui -->
   </div>
