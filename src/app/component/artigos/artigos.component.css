@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+.artigos-container {
+  background-image: url("https://i.postimg.cc/ZKSsWfb6/backgroud2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 20px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.artigos-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  background: linear-gradient(to right, #f4b400, #ffcc33);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #f4b400, #ffcc33);
+  border-radius: 2px;
+}
+
+.artigos-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.artigo-card {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  width: 30%;
+}
+
+.artigo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(244, 180, 0, 0.3);
+}
+
+.artigo-img {
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artigo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.artigo-card:hover .artigo-img img {
+  transform: scale(1.1);
+}
+
+.artigo-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.artigo-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #f4b400;
+  font-weight: 600;
+}
+
+.artigo-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .artigos-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .artigo-card {
+    width: 80%;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
