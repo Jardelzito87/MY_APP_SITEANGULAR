@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HomeComponent } from './component/home/home.component';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { ArtigosComponent } from './component/artigos/artigos.component';
 import { QuemSomosComponent } from './component/quem-somos/quem-somos.component';
 import { ContatoComponent } from './component/contato/contato.component';
+import { AuthService } from './services/auth.service';
  
  
 @Component({
@@ -21,6 +22,11 @@ import { ContatoComponent } from './component/contato/contato.component';
 })
 export class AppComponent {
   title = 'MY-APP';
-  // Aqui você pode adicionar propriedades e métodos que serão usados no template
- 
+  private authService = inject(AuthService);
+  private router = inject(Router);
+  
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
 }
