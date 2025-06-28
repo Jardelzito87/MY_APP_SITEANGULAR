@@ -25,7 +25,20 @@ import { Router } from '@angular/router';
               required>
           </div>
           <button type="submit">Entrar</button>
+          <button type="button" (click)="showForgotPassword()" class="forgot-btn">Esqueci a Senha</button>
           <div class="error" [style.display]="errorMessage ? 'block' : 'none'">{{ errorMessage }}</div>
+          <div class="success" [style.display]="successMessage ? 'block' : 'none'">{{ successMessage }}</div>
+        </form>
+        
+        <!-- Formulário Esqueci a Senha -->
+        <form [style.display]="showForgot ? 'block' : 'none'" (submit)="onForgotPassword($event)" class="forgot-form">
+          <h3>Esqueci a Senha</h3>
+          <p>Digite seu email para receber um link de reset:</p>
+          <div class="form-group">
+            <input type="email" #forgotEmail placeholder="Seu Email" required>
+          </div>
+          <button type="submit">Enviar Email</button>
+          <button type="button" (click)="showForgot = false">Cancelar</button>
         </form>
       </div>
     </div>
@@ -35,8 +48,8 @@ import { Router } from '@angular/router';
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      background: #000;
+      min-height: 80vh;
+      padding: 20px;
     }
 
     .login-form {
@@ -85,18 +98,50 @@ import { Router } from '@angular/router';
       text-align: center;
       margin-top: 10px;
     }
+
+    .success {
+      color: #44ff44;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .forgot-btn {
+      background: transparent;
+      border: 1px solid #f4b400;
+      color: #f4b400;
+      margin-top: 10px;
+    }
+
+    .forgot-form {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+    }
+
+    .forgot-form h3 {
+      color: #f4b400;
+      text-align: center;
+      margin-bottom: 20px;
+    }
   `]
 })
 export class LoginComponent {
   private router = inject(Router);
   
   errorMessage: string = '';
+  successMessage: string = '';
+  showForgot: boolean = false;
+
+  showForgotPassword() {
+    this.showForgot = true;
+    this.errorMessage = '';
+    this.successMessage = '';
+  }
 
   async onLogin(event: Event) {
     event.preventDefault();
     
     const form = event.target as HTMLFormElement;
-    const formData = new FormData(form);
     const email = (form.querySelector('input[type="email"]') as HTMLInputElement).value;
     const password = (form.querySelector('input[type="password"]') as HTMLInputElement).value;
 
@@ -115,6 +160,34 @@ export class LoginComponent {
         this.router.navigate(['/home']);
       } else {
         this.errorMessage = 'Email ou senha inválidos';
+      }
+    } catch (error) {
+      this.errorMessage = 'Erro de conexão';
+    }
+  }
+
+  async onForgotPassword(event: Event) {
+    event.preventDefault();
+    
+    const form = event.target as HTMLFormElement;
+    const email = (form.querySelector('input[type="email"]') as HTMLInputElement).value;
+
+    try {
+      const response = await fetch('http://localhost:3001/api/forgot-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email })
+      });
+
+      if (response.ok) {
+        this.successMessage = 'Email de reset enviado! Verifique sua caixa de entrada.';
+        this.errorMessage = '';
+        this.showForgot = false;
+      } else {
+        const data = await response.json();
+        this.errorMessage = data.message || 'Erro ao enviar email';
       }
     } catch (error) {
       this.errorMessage = 'Erro de conexão';

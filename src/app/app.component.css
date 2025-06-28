@@ -21,3 +21,32 @@ h1{
   color: #ffb300;
   transform: scale(1.15);
 }
+
+/* Estilo do menu */
+menu ul {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.logout-item {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.logout-btn {
+  background: #f4b400;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ffcc33;
+}

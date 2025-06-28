@@ -1,0 +1,2 @@
+-- Script removido - usuário de teste não será mais criado automaticamente
+-- Use apenas usuários reais cadastrados no banco de dados
