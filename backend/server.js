@@ -10,9 +10,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Servir arquivos estáticos do Angular
-app.use(express.static(path.join(__dirname, '../dist/my-app/browser')));
-
 // Configuração do SQL Server Azure
 const config = {
   user: 'jardel.sgomes1',
@@ -178,13 +175,13 @@ app.post('/api/reset-password', async (req, res) => {
   }
 });
 
-// Servir o Angular para todas as outras rotas
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/my-app/browser/index.html'));
+// API health check
+app.get('/', (req, res) => {
+  res.json({ message: 'Backend server is running' });
 });
 
-app.listen(3001, () => {
-  console.log('Servidor rodando na porta 3001');
-  console.log('Site disponível em: http://localhost:3001');
+app.listen(3003, () => {
+  console.log('Servidor rodando na porta 3003');
+  console.log('Site disponível em: http://localhost:3003');
   console.log('Conectado ao SQL Server Azure');  
 });
