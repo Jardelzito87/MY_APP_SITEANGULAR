@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-login',
@@ -127,6 +128,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   private router = inject(Router);
+  private apiService = inject(ApiService);
   
   errorMessage: string = '';
   successMessage: string = '';
@@ -146,13 +148,7 @@ export class LoginComponent {
     const password = (form.querySelector('input[type="password"]') as HTMLInputElement).value;
 
     try {
-      const response = await fetch('http://localhost:3001/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password })
-      });
+      const response = await this.apiService.login(email, password);
 
       if (response.ok) {
         const data = await response.json();
@@ -173,13 +169,7 @@ export class LoginComponent {
     const email = (form.querySelector('input[type="email"]') as HTMLInputElement).value;
 
     try {
-      const response = await fetch('http://localhost:3001/api/forgot-password', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email })
-      });
+      const response = await this.apiService.forgotPassword(email);
 
       if (response.ok) {
         this.successMessage = 'Email de reset enviado! Verifique sua caixa de entrada.';
