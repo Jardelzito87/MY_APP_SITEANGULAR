@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
   private getBaseUrl(): string {
-    // Se estiver em produção (Azure), use a URL do seu servidor
+    // Se estiver em produção (Azure), use a API integrada
     if (window.location.hostname.includes('azurestaticapps.net')) {
-      return 'https://barbeariadoalemao.azurewebsites.net'; // Substitua pela URL do seu backend no Azure
+      return '/api'; // API integrada do Static Web App
     }
     // Para desenvolvimento local
     return 'http://localhost:3003';
