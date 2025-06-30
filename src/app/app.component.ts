@@ -1,9 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { HomeComponent } from './component/home/home.component';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { ArtigosComponent } from './component/artigos/artigos.component';
-import { QuemSomosComponent } from './component/quem-somos/quem-somos.component';
-import { ContatoComponent } from './component/contato/contato.component';
 import { AuthService } from './services/auth.service';
  
  
@@ -11,11 +7,7 @@ import { AuthService } from './services/auth.service';
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    RouterLink,
-    HomeComponent,
-    ArtigosComponent,
-    QuemSomosComponent,
-    ContatoComponent
+    RouterLink
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
